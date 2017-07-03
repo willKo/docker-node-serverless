@@ -11,7 +11,7 @@ RUN export PKG_CONFIG_PATH='/usr/local/lib/pkgconfig'
 RUN export LD_LIBRARY_PATH='/usr/local/lib':$LD_LIBRARY_PATH  
 
 
-RUNcurl -L http://sourceforge.net/projects/libpng/files/libpng15/1.5.27/libpng-1.5.27.tar.xz/download -o libpng.tar.xz
+RUN curl -L http://sourceforge.net/projects/libpng/files/libpng15/1.5.27/libpng-1.5.27.tar.xz/download -o libpng.tar.xz
 RUN tar -Jxf libpng.tar.xz && cd libpng-1.5.27/
 RUN ./configure --prefix=/usr/local
 RUN make 
