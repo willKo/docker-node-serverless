@@ -6,7 +6,8 @@ RUN npm install serverless-dynamodb-local --save-dev
 RUN npm install serverless-offline --save-dev
 RUN npm install fabric@1.7.14
 RUN export LDFLAGS=-Wl,-rpath=/var/task/
-RUN apt-get install cairo-devel libjpeg-turbo-devel giflib-devel -y
+
+RUN apt-get install libcairo2-dev libjpeg-turbo  giflib-tools -y
 RUN export PKG_CONFIG_PATH='/usr/local/lib/pkgconfig'  
 RUN export LD_LIBRARY_PATH='/usr/local/lib':$LD_LIBRARY_PATH  
 
