@@ -1,12 +1,10 @@
 FROM node:6.10.3-wheezy
 RUN npm -v
 RUN apt-get update
-RUN apt-get install build-essential
+RUN apt-get install build-essential -y
 
 RUN npm install -g serverless@1.16.1
 RUN serverless -v
-RUN npm install serverless-dynamodb-local --save-dev
-RUN npm install serverless-offline --save-dev
 RUN npm install fabric@1.7.14
 RUN export LDFLAGS=-Wl,-rpath=/var/task/
 
