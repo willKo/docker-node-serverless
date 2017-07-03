@@ -39,3 +39,10 @@ RUN tar -xJf cairo.tar.xz && cd cairo-1.12.14/
 RUN ./configure --disable-dependency-tracking --without-x --prefix=/usr/local 
 RUN make 
 RUN sudo make install 
+
+RUN npm install node-canvas
+RUN cd node_modules/canvas
+RUN node-gyp rebuild
+RUN cd ../../
+RUN npm install -g fabric@1.7.14
+
