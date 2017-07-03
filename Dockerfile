@@ -1,7 +1,7 @@
 FROM node:6.10.3-wheezy
 RUN npm -v
-RUN sudo apt-get update
-RUN sudo  apt-get install build-essential
+RUN apt-get update
+RUN apt-get install build-essential
 
 RUN npm install -g serverless@1.16.1
 RUN serverless -v
