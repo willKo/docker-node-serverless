@@ -15,17 +15,17 @@ RUN export LD_LIBRARY_PATH='/usr/local/lib':$LD_LIBRARY_PATH
 
 RUN curl -L http://sourceforge.net/projects/libpng/files/libpng15/1.5.27/libpng-1.5.27.tar.xz/download -o libpng.tar.xz
 RUN tar -Jxf libpng.tar.xz && cd libpng-1.5.27/
-RUN ./configure --prefix=/usr/local
+
 RUN make 
 RUN sudo make install  
 RUN curl http://www.ijg.org/files/jpegsrc.v8d.tar.gz -o jpegsrc.tar.gz
 RUN tar -zxf jpegsrc.tar.gz && cd jpeg-8d/
-RUN ./configure --disable-dependency-tracking --prefix=/usr/local  
+
 RUN make
 RUN sudo make install
 RUN curl https://www.cairographics.org/releases/pixman-0.28.2.tar.gz -o pixman.tar.gz  
 RUN tar -zxf pixman.tar.gz && cd pixman-0.28.2/  
-RUN ./configure --prefix=/usr/local   
+
 RUN make 
 RUN sudo make install  
 
@@ -38,7 +38,7 @@ RUN sudo make install
 
 RUN curl https://cairographics.org/releases/cairo-1.12.14.tar.xz -o cairo.tar.xz  
 RUN tar -xJf cairo.tar.xz && cd cairo-1.12.14/  
-RUN ./configure --disable-dependency-tracking --without-x --prefix=/usr/local 
+
 RUN make 
 RUN sudo make install 
 
