@@ -32,7 +32,7 @@ RUN sudo make install
 
 RUN curl http://public.p-knowledge.co.jp/Savannah-nongnu-mirror//freetype/freetype-2.4.11.tar.gz -o freetype.tar.gz
 RUN tar -zxf freetype.tar.gz && cd freetype-2.4.11/  
-RUN ./configure --prefix=/usr/local   
+
 RUN make 
 RUN sudo make install 
 
