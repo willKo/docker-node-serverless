@@ -1,5 +1,6 @@
 FROM node:6.10.3-wheezy
 RUN npm -v
+RUN apt-get update
 RUN npm install -g serverless@1.16.1
 RUN serverless -v
 RUN npm install serverless-dynamodb-local --save-dev
