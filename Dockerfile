@@ -7,7 +7,7 @@ RUN npm install serverless-offline --save-dev
 RUN npm install fabric@1.7.14
 RUN export LDFLAGS=-Wl,-rpath=/var/task/
 
-RUN apt-get install libcairo2-dev libjpeg62-turbo  giflib-tools -y
+RUN apt-get install libcairo2-dev libjpeg62  giflib-tools -y
 RUN export PKG_CONFIG_PATH='/usr/local/lib/pkgconfig'  
 RUN export LD_LIBRARY_PATH='/usr/local/lib':$LD_LIBRARY_PATH  
 
