@@ -14,7 +14,9 @@ RUN export LD_LIBRARY_PATH='/usr/local/lib':$LD_LIBRARY_PATH
 
 RUN npm install -g canvas
 RUN npm install -g node-gyp 
-
-
-
 RUN npm install -g fabric@1.7.14
+cd node_modules/canvas; node-gyp rebuild
+cd ../../ 
+mkdir pkg 
+cp -L nodemodules/canvas/lib/*.so.* ./pkg
+
