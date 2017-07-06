@@ -3,8 +3,8 @@ RUN npm -v
 RUN apt-get update
 
 RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
-RUN unxz wkhtmltox-linux-amd64_0.12.0-03c001d.tar.xz
-RUN tar -xvf wkhtmltox-linux-amd64_0.12.0-03c001d.tar
+RUN unxz ./wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+RUN tar -xvf ./wkhtmltox-0.12.4_linux-generic-amd64.tar
 RUN cd /wkhtmltox/bin
 RUN mv wkhtmltopdf  /usr/bin/wkhtmltopdf
 
