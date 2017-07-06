@@ -1,2 +1,2 @@
 # docker-node-serverless
-node-based docker image with serverless framework installed
+amazonlinux docker image wkhtmltopdf, serverless framework and some fabric libraries (not tested). 
