@@ -14,6 +14,8 @@ RUN yum install -y  wget
 RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 RUN tar -xvf ./wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 RUN cd /wkhtmltox/bin && cp wkhtmltopdf  /usr/bin/wkhtmltopdf
+RUN export PATH=$PATH:/usr/bin/wkhtmltopdf
+RUN echo "$PATH"
 
 RUN npm install -g node-wkhtmltopdf 
 RUN npm install -g serverless@1.16.1
@@ -28,3 +30,4 @@ RUN npm install -g canvas
 RUN npm install -g node-gyp 
 RUN npm install -g fabric@1.7.14
 RUN cd /usr/local/lib/node_modules/canvas && node-gyp rebuild
+
