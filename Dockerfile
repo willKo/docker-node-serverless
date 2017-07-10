@@ -14,7 +14,8 @@ RUN yum install -y  wget
 RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 RUN tar -xvf ./wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 RUN cd /wkhtmltox/bin && cp wkhtmltopdf  /usr/bin/wkhtmltopdf
-RUN export PATH=$PATH:/usr/bin/wkhtmltopdf
+
+ENV PATH="/usr/bin/wkhtmltopdf:${PATH}"
 RUN echo "$PATH"
 
 RUN npm install -g node-wkhtmltopdf 
