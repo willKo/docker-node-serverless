@@ -1,5 +1,6 @@
 # docker-node-serverless
 
+amazonlinux with serverless framework, wkhtmltopdf, fabricjs 
 ## base image: 
 amazonlinux:latest 
 
