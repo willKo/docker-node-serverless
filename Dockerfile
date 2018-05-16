@@ -1,6 +1,7 @@
 FROM amazonlinux:latest
 
 
+RUN yum install -y java-1.8.0-openjdk
 RUN yum install -y git 
 RUN yum install -y gcc-c++ make 
 RUN yum install -y openssl-devel 
