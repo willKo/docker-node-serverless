@@ -9,6 +9,7 @@ amazonlinux:latest
 - wkhtmltox: 0.12.4
 - serverless: 1.16.1
 - node-wkhtmltopdf: latest
-- canvas: latest
-- node-gyp: latest 
+- canvas: 1.6.7
+- node-gyp: 6.10.2
 - fabric: 1.7.14
+ 
